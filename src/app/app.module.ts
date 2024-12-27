@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+
+import { ROUTES } from './avanzadas/routes/app.routes';
 
 import { AppComponent } from './app.component';
 import { MedicosComponent } from './intermedias/espias/medicos.component';
@@ -20,7 +23,8 @@ import { IncrementadorComponent } from './intermedias2/incrementador/incrementad
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot( ROUTES )
   ],
   providers: [MedicoService],
   bootstrap: [AppComponent]
